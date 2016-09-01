@@ -4,13 +4,15 @@ import UserDetails from '../containers/user-detail';
 require('../../scss/style.scss');
 
 const App = () => (
-    <div>
-        <h2>User List</h2>
-        <UserList />
-        <hr />
-        <h2>User Details</h2>
-        <UserDetails />
+
+  <div className="container-fluid">
+    <h1 id="title" className="fadeInUp">SkyGym</h1>
+    <div className="menuPlanet">
+      <img src="images/planet.png" />
+      <img src="images/GasGiant-Ca04.png" />
+      <img src="images/render_saturn.png" />
     </div>
+  </div>
 );
 
 export default App;
