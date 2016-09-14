@@ -92,34 +92,27 @@ html {
   color:white;
 }
 
-.menuPlanet{
-  position: relative;
-}
-.menuPlanet img{
-  max-width: 150px;
-}
-
-.menuPlanet img:nth-child(1){
-  position: inherit;
-  left:20%;
-  top:75px;
-}
-.menuPlanet img:nth-child(2){
-    position: inherit;
-    left:35%;
-    top:-50px;
-}
-.menuPlanet img:nth-child(3){
-  position: inherit;
-  max-width: 250px;
-  top:120px;
-  left:45%;
-}
-
 .centerbox{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.centerbox img{
+  max-width: 150px;
+}
+
+.centerbox img:nth-child(1){
+  position: relative;
+
+}
+.centerbox img:nth-child(2){
+    position: relative;
+
+}
+.centerbox img:nth-child(3){
+  position: relative;
+  max-width: 250px;
+
 }
 
 .infinitor{
