@@ -1,23 +1,182 @@
 extends ./layout.pug
 
 block prepend body
-  body.homepage(onload="initialize()")
+  body.homepage
     
     .container-fluid.intro
       #stars
       #stars2
       #stars3
-      h1#title SkyGym
+      h1#title X-Wing League Table
       .centerbox
-          img(src="images/planet.png")
-          img(src="images/GasGiant-Ca04.png")
-          img(src="images/render_saturn.png")
+          img(src="images/FOTie.png")
+          img(src="images/TieDefender.ico")
+          img(src="images/poe.png")
       .centerbox
         i.fa.fa-angle-down.infinitor
-    .container-fluid.map
-      h2 Journey of discovery . . .
-      p  
-        |Sky Gym is a resource to help you learn to code websties. As you journey
-        |from the inner solar system to outer universe you will learn invalubale lessons
-        |that will give you a solid foundation in HTML, CSS, and Javascript.
-    .container-fluid.footer
+    .container-fluid#leaderboard
+      .leaderboard
+        h2 Leaderboard
+        div.panel-group#accordion(role="tablist" aria-multiselectable="true")
+          div.panel.panel-default
+            div.panel-heading#headingOne(role="tab")
+              h4.panel-title
+                a.collapsed(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+                  .row
+                    .col-md-6
+                      h3#first 1) Name Nameson
+                    .col-md-6
+                      h3#firtsPoints 300pts
+            div#collapseOne.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingOne")
+              div.panel-body
+                .row
+                  .col-md-6
+                    h3 Most Recent Build
+                    Table
+                      tr
+                        td Ship1
+                        td 
+                          |Item1
+                          |Item2
+                          |Item3
+                      tr
+                        td Ship2
+                        td 
+                          |Item1
+                          |Item2
+                          |Item3
+                      tr
+                        td Ship3
+                        td 
+                          |Item1
+                          |Item2
+                          |Item3
+                  .col-md-6
+                    h3 Most Recent Games
+                    Table
+                      tr
+                        th Game #
+                        th Win or Loss
+                        th Point Dif
+                      tr
+                        td Week1
+                        td Win
+                        td +100
+                      tr
+                        td Week2
+                        td Win
+                        td +75
+          div.panel.panel-default
+            div.panel-heading#headingTwo(role="tab")
+              h4.panel-title
+                a.collapsed(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                  .row
+                    .col-md-6
+                      h3#second 2) Ricky Taner
+                    .col-md-6
+                      h3#secondPoints 270pts
+            div#collapseTwo.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingTwo")
+              div.panel-body
+                .row
+                  .col-md-6
+                    h3 Most Recent Build
+                    Table
+                      tr
+                        td Ship1
+                        td 
+                          |Item1
+                          |Item2
+                          |Item3
+                      tr
+                        td Ship2
+                        td 
+                          |Item1
+                          |Item2
+                          |Item3
+                      tr
+                        td Ship3
+                        td 
+                          |Item1
+                          |Item2
+                          |Item3
+                  .col-md-6
+                    h3 Most Recent Games
+                    Table
+                      tr
+                        th Game #
+                        th Win or Loss
+                        th Point Dif
+                      tr
+                        td Week1
+                        td Win
+                        td +100
+                      tr
+                        td Week2
+                        td Win
+                        td +75
+          div.panel.panel-default
+            div.panel-heading#headingThree(role="tab")
+              h4.panel-title
+                a.collapsed(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+                  .row
+                    .col-md-6
+                      h3#second 3) Sucky Mcshitter
+                    .col-md-6
+                      h3#secondPoints 230pts
+            div#collapseThree.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingThree")
+              div.panel-body
+                .row
+                  .col-md-6
+                    h3 Most Recent Build
+                    Table
+                      tr
+                        td Ship1
+                        td 
+                          |Item1
+                          |Item2
+                          |Item3
+                      tr
+                        td Ship2
+                        td 
+                          |Item1
+                          |Item2
+                          |Item3
+                      tr
+                        td Ship3
+                        td 
+                          |Item1
+                          |Item2
+                          |Item3
+                  .col-md-6
+                    h3 Most Recent Games
+                    Table
+                      tr
+                        th Game #
+                        th Win or Loss
+                        th Point Dif
+                      tr
+                        td Week1
+                        td Win
+                        td +100
+                      tr
+                        td Week2
+                        td Win
+                        td +75
+          
+    .container-fluid.statistics
+      ul.nav.nav-tabs(role="tablist")
+        li.active(role="presentation")
+          a(href="#home" aria-controls="home" role="tab" data-toggle="tab") Home
+        li(role="presentation")
+          a(href="#profile" aria-controls="profile" role="tab" data-toggle="tab") Profile
+        li(role="presentation")
+          a(href="#messages" aria-controls="messages" role="tab" data-toggle="tab") Messages
+        li(role="presentation")
+          a(href="#settings" aria-controls="settings" role="tab" data-toggle="tab") Settings
+
+      <!-- Tab panes -->
+      div.tab-content
+        div#home.tab-pane.active(role="tabpanel") Home Content
+        div#profile.tab-pane(role="tabpanel") Profile Content
+        div#messages.tab-pane(role="tabpanel") Messages Content
+        div#settings.tab-pane(role="tabpanel") Settings Content

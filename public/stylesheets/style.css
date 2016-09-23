@@ -9,6 +9,15 @@ h2{
   color:white;
 }
 
+p{
+  margin:
+}
+
+p::first-letter{
+  padding-left: 30px;
+}
+
+
 /* Star Effect*/
 #stars {
   width: 1px;
@@ -94,7 +103,7 @@ h2{
   color: #FFF;
   text-align: center;
   font-family: "AstronBoy";
-  font-size: 100px;
+  font-size: 50px;
   color:white;
 }
 
@@ -135,31 +144,52 @@ h2{
 }
 
 /* Sky Map Section */
-.map
+#leaderboard
 {
   background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
-  height: 750px;
+  font-family: 'Oswald', sans-serif;
+}
+#leaderboard h2
+{
+  text-align:center;
+  color: white;
+  font-family: "AstronBoy";
+  font-size: 75px;
 }
 
-.map h2{
+.leaderboard{
   margin-top: 150px;
-  margin-bottom: 150px;
+  background-color: rgb(47,79,79);
+  padding: 20px;
 }
 
-.map p{
-  width: 60%;
-  margin-left: 20%;
-  font-family: 'Indie Flower', cursive;
-  font-size: 20px;
-  color:white;
+.panel-default>.panel-heading {
+  background-color: rgb(112,128,144);
+  color: white;
 }
 
-.footer
+.panel-default>.panel-heading h3{
+    font-size: 50px;
+}
+
+.statistics
 {
   background: radial-gradient(ellipse at top, #0e131a 0%, #090a0f 100%);
   height: 750px;
 }
 
+.statistics ul{
+  margin-top: 150px;
+  background-color: rgb(47,79,79);
+  padding: 20px;
+}
+
+.statistics .tab-pane{
+  background-color: #fff;
+  color: #000;
+  height: 500px;
+  margin-bottom: 100px;
+}
 
 
 @font-face {
