@@ -11,7 +11,7 @@ var PORT = app.get('port');
 mongoose.connect('mongodb://localhost/passport_local_mongoose');
 
 // routes
-require('./routes')(app);
+require('./routes')(app, passport);
 
 app.listen(PORT, function() {
   console.log('Express server listening on port ' + PORT);

@@ -1,12 +1,13 @@
-
-
-var passport = require('passport');
 var Account = require('./models/account');
 
-module.exports = function (app) {
+module.exports = function (app, passport) {
 
   app.get('/', function (req, res) {
-      res.render('homepage', { user : req.user });
+      res.render('homepage');
+  });
+
+  app.get('/admin', function (req, res) {
+      res.render('admin', { user : req.user });
   });
 
   app.get('/register', function(req, res) {
@@ -20,7 +21,7 @@ module.exports = function (app) {
         }
 
         passport.authenticate('local')(req, res, function () {
-          res.redirect('/');
+          res.redirect('/admin');
         });
     });
   });
@@ -30,7 +31,7 @@ module.exports = function (app) {
   });
 
   app.post('/login', passport.authenticate('local'), function(req, res) {
-      res.redirect('/');
+      res.redirect('/admin');
   });
 
   app.get('/logout', function(req, res) {

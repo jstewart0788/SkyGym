@@ -89,7 +89,6 @@ p::first-letter{
 .intro
 {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  height: 650px;
   position: relative;
 }
 
@@ -118,29 +117,18 @@ p::first-letter{
 
 .centerbox img:nth-child(1){
   position: relative;
-  top: 100px;
   left:-15%;
 
 }
 .centerbox img:nth-child(2){
-    position: relative;
-    top: -50px;
-    left:10%;
-
-}
-.centerbox img:nth-child(3){
   position: relative;
   max-width: 250px;
-  top: 150px;
-  left:20%;
+  left:30%;
 
 }
 
-.infinitor{
-  position: absolute;
-  bottom: 0px;
-  color: white;
-  font-size: 6em;
+.intro .nav{
+margin-top: 50px;
 }
 
 /* Sky Map Section */
@@ -175,22 +163,60 @@ p::first-letter{
 .statistics
 {
   background: radial-gradient(ellipse at top, #0e131a 0%, #090a0f 100%);
-  height: 750px;
+  padding: 100px;
 }
 
 .statistics ul{
   margin-top: 150px;
   background-color: rgb(47,79,79);
-  padding: 20px;
+  padding: 1px;
+}
+
+.statistics .nav-tabs .active a:focus, .statistics .nav-tabs .active a, .statistics .nav-tabs .active a:hover{
+    background-color: rgb(112,128,144);
+    color: white;
 }
 
 .statistics .tab-pane{
-  background-color: #fff;
-  color: #000;
+  background-color: rgb(112,128,144);
+  color: #444;
   height: 500px;
   margin-bottom: 100px;
 }
 
+.footer
+{
+  background: #090a0f;
+  text-align: center;
+}
+
+.nav{
+  font-size: 3em;
+  font-family: AstronBoy;
+}
+.nav a{
+  color: #fff;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: rgba(0, 0, 0, 0.0);;
+}
+
+.fa-stack-1x
+{
+  color: #000;
+}
+
+.fa-stack-2x
+{
+  color: #337ab7;
+}
+
+.social{
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
 
 @font-face {
    font-family: "AstronBoy";
