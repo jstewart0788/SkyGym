@@ -3,24 +3,7 @@ extends ./layout.pug
 block prepend body
   body.homepage
     
-    .container-fluid.intro
-      #stars
-      #stars2
-      #stars3
-      h1#title X-Wing League Table
-      .centerbox
-          img(src="images/FOTie.png")
-          img(src="images/poe.png")
-      .centerbox
-        ul.nav.nav-justified
-          li(role="presentation") 
-            a(href="/") Leaderboard 
-          li(role="presentation") 
-            a(href="/register") Statistics 
-          li(role="presentation") 
-            a(href="/login") Social Links
-          li(role="presentation") 
-            a(href="/admin") Admin Pannel
+    include ./partials/header.pug
     .container-fluid#leaderboard
       .leaderboard
         h2 Leaderboard
@@ -170,53 +153,23 @@ block prepend body
                         td Win
                         td +75
           
-    .container-fluid.statistics
-      ul.nav.nav-tabs.nav-justified(role="tablist")
-        li.active(role="presentation")
-          a(href="#home" aria-controls="home" role="tab" data-toggle="tab") Home
-        li(role="presentation")
-          a(href="#profile" aria-controls="profile" role="tab" data-toggle="tab") Profile
-        li(role="presentation")
-          a(href="#messages" aria-controls="messages" role="tab" data-toggle="tab") Messages
-        li(role="presentation")
-          a(href="#settings" aria-controls="settings" role="tab" data-toggle="tab") Settings
+    .container-fluid#statistics
+      .statistics
+        ul.nav.nav-tabs.nav-justified(role="tablist")
+          li.active(role="presentation")
+            a(href="#home" aria-controls="home" role="tab" data-toggle="tab") Home
+          li(role="presentation")
+            a(href="#profile" aria-controls="profile" role="tab" data-toggle="tab") Profile
+          li(role="presentation")
+            a(href="#messages" aria-controls="messages" role="tab" data-toggle="tab") Messages
+          li(role="presentation")
+            a(href="#settings" aria-controls="settings" role="tab" data-toggle="tab") Settings
 
-      <!-- Tab panes -->
-      div.tab-content
-        div#home.tab-pane.active(role="tabpanel") Home Content
-        div#profile.tab-pane(role="tabpanel") Profile Content
-        div#messages.tab-pane(role="tabpanel") Messages Content
-        div#settings.tab-pane(role="tabpanel") Settings Content
-        
-    .container-fluid.footer
-      ul.nav.nav-justified
-        li(role="presentation") 
-          a(href="/") Home 
-        li(role="presentation") 
-          a(href="/register") Register 
-        li(role="presentation") 
-          a(href="/login") Login
-        li(role="presentation") 
-          a(href="/admin") Admin Pannel
-      .row
-        .col-xs-1.col-sm-2.col-md-4
-        .col-xs-10.col-sm-8.col-md-4.social
-          a(href="#")
-            span.fa-stack.fa-lg
-              i.fa.fa-circle.fa-stack-2x
-              i.fa.fa-facebook.fa-stack-1x
-          a(href="#")
-            span.fa-stack.fa-lg
-              i.fa.fa-circle.fa-stack-2x
-              i.fa.fa-twitter.fa-stack-1x
-          a(href="#")
-            span.fa-stack.fa-lg
-              i.fa.fa-circle.fa-stack-2x
-              i.fa.fa-twitch.fa-stack-1x
-          a(href="#")
-            span.fa-stack.fa-lg
-              i.fa.fa-circle.fa-stack-2x
-              i.fa.fa-slack.fa-stack-1x
-        .col-xs-1.col-sm-2.col-md-4
-
-      
+        <!-- Tab panes -->
+        div.tab-content
+          div#home.tab-pane.active(role="tabpanel") Home Content
+          div#profile.tab-pane(role="tabpanel") Profile Content
+          div#messages.tab-pane(role="tabpanel") Messages Content
+          div#settings.tab-pane(role="tabpanel") Settings Content
+          
+    include ./partials/footer.pug

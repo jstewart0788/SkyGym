@@ -1,4 +1,5 @@
 var Account = require('./models/account');
+var Ship = require('./models/ship');
 
 module.exports = function (app, passport) {
 
@@ -37,6 +38,13 @@ module.exports = function (app, passport) {
   app.get('/logout', function(req, res) {
       req.logout();
       res.redirect('/');
+  });
+
+  app.get('/shipList', function(req, res){
+      Ship.find({ }, function (err, ship) {
+        if (err) return handleError(err);
+        res.json(ship);
+      })
   });
 
 };

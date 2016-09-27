@@ -1,6 +1,7 @@
 
 html {
   height: 100%;
+  font-family: 'Oswald', sans-serif;
 }
 
 h2{
@@ -99,11 +100,17 @@ p::first-letter{
   transform: rotate(-21deg);
   top: 30px;
   left:-50px;
-  color: #FFF;
   text-align: center;
   font-family: "AstronBoy";
   font-size: 50px;
-  color:white;
+}
+
+#title a{
+  color: white;
+}
+
+#title a:hover{
+  text-decoration: none;
 }
 
 .centerbox{
@@ -135,7 +142,6 @@ margin-top: 50px;
 #leaderboard
 {
   background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
-  font-family: 'Oswald', sans-serif;
 }
 #leaderboard h2
 {
@@ -149,6 +155,7 @@ margin-top: 50px;
   margin-top: 150px;
   background-color: rgb(47,79,79);
   padding: 20px;
+  position: relative;
 }
 
 .panel-default>.panel-heading {
@@ -160,24 +167,26 @@ margin-top: 50px;
     font-size: 50px;
 }
 
-.statistics
-{
+#statistics{
   background: radial-gradient(ellipse at top, #0e131a 0%, #090a0f 100%);
   padding: 100px;
 }
+.statistics{
+  position: relative;
+}
 
-.statistics ul{
+#statistics ul{
   margin-top: 150px;
   background-color: rgb(47,79,79);
   padding: 1px;
 }
 
-.statistics .nav-tabs .active a:focus, .statistics .nav-tabs .active a, .statistics .nav-tabs .active a:hover{
+#statistics .nav-tabs .active a:focus, .statistics .nav-tabs .active a, .statistics .nav-tabs .active a:hover{
     background-color: rgb(112,128,144);
     color: white;
 }
 
-.statistics .tab-pane{
+#statistics .tab-pane{
   background-color: rgb(112,128,144);
   color: #444;
   height: 500px;
@@ -196,11 +205,14 @@ margin-top: 50px;
 }
 .nav a{
   color: #fff;
+  border-bottom: 1px solid white;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-    background-color: rgba(0, 0, 0, 0.0);;
+    background-color: rgba(0, 0, 0, 0.0);
+    border-bottom: 2px solid white;
 }
+
 
 .fa-stack-1x
 {
@@ -212,10 +224,33 @@ margin-top: 50px;
   color: #337ab7;
 }
 
+.fa-plus-square-o:hover{
+  color: white;
+  background: rgb(112,128,144);
+}
+
 .social{
   margin-top: 100px;
   margin-bottom: 30px;
   font-size: 30px;
+}
+
+#admin-pannel{
+    background: radial-gradient(ellipse at top, #1b2735 0%,#090a0f 80%, #090a0f 100%);
+}
+
+.admin-pannel{
+  background-color: rgb(112,128,144);
+  position: relative;
+  margin: 100px;
+}
+
+.login{
+  background-color: rgb(112,128,144);
+  padding:100px;
+  position: relative;
+  align-content: center;
+  margin: 100px;
 }
 
 @font-face {

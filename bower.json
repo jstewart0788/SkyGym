@@ -1,0 +1,20 @@
+{
+  "name": "SkyGym",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Jonathan Stewart <jstewart0788@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jstewart0788/SkyGym",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-vertical-tabs": "^1.2.1"
+  }
+}
