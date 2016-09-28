@@ -158,6 +158,35 @@ margin-top: 50px;
   position: relative;
 }
 
+.leaderboard h3{
+  margin: 10px;
+}
+.leaderboard table{
+  margin: 10px;
+}
+
+.leaderboard th{
+  font-weight: bold;
+}
+
+.leaderboard .centered th ,.leaderboard .centered td {
+    padding: 10px;
+}
+
+.leaderboard .centered th:first-child ,.leaderboard .centered td:first-child {
+      border-right:  1px solid black;
+}
+.leaderboard .centered th:last-child ,.leaderboard .centered td:last-child {
+      border-left:  1px solid black;
+}
+
+
+
+.leaderboard  .centered{
+  text-align: center;
+}
+
+
 .panel-default>.panel-heading {
   background-color: rgb(112,128,144);
   color: white;
@@ -171,26 +200,28 @@ margin-top: 50px;
   background: radial-gradient(ellipse at top, #0e131a 0%, #090a0f 100%);
   padding: 100px;
 }
-.statistics{
-  position: relative;
+
+#statistics h2{
+    font-size: 75px;
 }
 
-#statistics ul{
+.underline{
+    text-decoration: underline;;
+}
+
+.statistics{
   margin-top: 150px;
   background-color: rgb(47,79,79);
-  padding: 1px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  background-color: rgb(47,79,79);
 }
 
-#statistics .nav-tabs .active a:focus, .statistics .nav-tabs .active a, .statistics .nav-tabs .active a:hover{
-    background-color: rgb(112,128,144);
-    color: white;
-}
-
-#statistics .tab-pane{
+#statistics .data{
   background-color: rgb(112,128,144);
-  color: #444;
-  height: 500px;
-  margin-bottom: 100px;
+  color: white;
+  padding: 25px;
 }
 
 .footer
@@ -237,6 +268,7 @@ margin-top: 50px;
 
 #admin-pannel{
     background: radial-gradient(ellipse at top, #1b2735 0%,#090a0f 80%, #090a0f 100%);
+    padding: 100px;
 }
 
 .admin-pannel{
@@ -253,12 +285,27 @@ margin-top: 50px;
   margin: 100px;
 }
 
+.logout{
+  text-align: center;
+  background: rgb(112,128,144);
+  border: 1px solid white;
+  color: white;
+  padding: 20px;
+  margin: 40px;
+  margin-left: 100px;
+  position: relative;
+}
+
 .gameSubmit{
   margin: 50px;
 }
 
 .adminPoints{
   padding:10px;
+}
+
+#user{
+    margin: 50px;
 }
 
 @font-face {

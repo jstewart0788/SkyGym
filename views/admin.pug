@@ -19,7 +19,6 @@ block prepend body
               a(href='/')
                 button.btn.btn-primary(type="button") Cancel  
         if (user)
-          p You are currently logged in as #{user.username}
           .admin-pannel
             .row
               .col-xs-3
@@ -47,7 +46,7 @@ block prepend body
                           h3 Points Earned
                           input(type="range" id="Player1PointsEarned" name="Player1PointsEarned" min="0" max="100" style="max-width:150px;")
                           span#Player1PointsEarnedDisplay
-                            h3 0
+                            h3 50
                       .row
                         .col-md-7
                           h2 Player 2
@@ -59,7 +58,7 @@ block prepend body
                           h3 Points Earned
                           input(type="range" id="Player2PointsEarned" name="Player2PointsEarned" min="0" max="100" style="max-width:150px;")
                           span#Player2PointsEarnedDisplay
-                            h3 0
+                            h3 50
                       .row.gameSubmit
                         button.btn.btn-default(type='submit') Submit
                   .tab-pane#user
@@ -77,5 +76,5 @@ block prepend body
                         button.btn.btn-primary(type="button") Cancel
 
  
-          a(href="/logout") Logout
+          a.logout(href="/logout") Logout
       include ./partials/footer.pug

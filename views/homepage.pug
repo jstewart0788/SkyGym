@@ -35,7 +35,7 @@ block prepend body
 
                     .col-md-6
                       h3 Most Recent Games
-                      Table
+                      Table.centered
                         tr
                           th Opponent
                           th Points Won
@@ -50,24 +50,23 @@ block prepend body
           
     .container-fluid#statistics
       .statistics
-        ul.nav.nav-tabs.nav-justified(role="tablist")
-          li.active(role="presentation")
-            a(href="#home" aria-controls="home" role="tab" data-toggle="tab") Home
-          li(role="presentation")
-            a(href="#profile" aria-controls="profile" role="tab" data-toggle="tab") Profile
-          li(role="presentation")
-            a(href="#messages" aria-controls="messages" role="tab" data-toggle="tab") Messages
-          li(role="presentation")
-            a(href="#settings" aria-controls="settings" role="tab" data-toggle="tab") Settings
-
-        <!-- Tab panes -->
-        div.tab-content
-          div#home.tab-pane.active(role="tabpanel") 
+        h2 Statistics
+        .data 
+          h3 Most Popular Ships:
+            .row
+              .col-md-2
+              .col-md-4  
+                h4.underline Pilot Name
+              .col-md-4  
+                h4.underline Popularity
+              .col-md-2  
             each ship in shipPop
-              h3= ship.name
-              h4= ship.pop
-          div#profile.tab-pane(role="tabpanel") Profile Content
-          div#messages.tab-pane(role="tabpanel") Messages Content
-          div#settings.tab-pane(role="tabpanel") Settings Content
+              .row
+                .col-md-2
+                .col-md-4  
+                  h4= ship.name
+                .col-md-4  
+                  h4= ship.pop
+                .col-md-2  
           
     include ./partials/footer.pug
