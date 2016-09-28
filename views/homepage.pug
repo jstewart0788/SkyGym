@@ -7,151 +7,44 @@ block prepend body
     .container-fluid#leaderboard
       .leaderboard
         h2 Leaderboard
-        div.panel-group#accordion(role="tablist" aria-multiselectable="true")
-          div.panel.panel-default
-            div.panel-heading#headingOne(role="tab")
-              h4.panel-title
-                a.collapsed(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+        .panel-group#accordion
+          - var n = 0;
+          while n < length
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title
+                  - var currentHref = ("#collapse" + n);
+                  - var currentID = ("collapse" + n);
+                  a.collapsed(data-toggle="collapse" data-parent="#accordion" href=currentHref)
+                    .row
+                      .col-md-6
+                        h3#first= players[n]
+                      .col-md-6
+                        h3#firtsPoints 300pts
+              .panel-collapse.collapse(id=currentID)
+                .panel-body
                   .row
                     .col-md-6
-                      h3#first 1) Name Nameson
+                      h3 Most Recent Build
+                      Table
+                        each ship in gameData[n].latestGame
+                          tr 
+                            td= ship
+
                     .col-md-6
-                      h3#firtsPoints 300pts
-            div#collapseOne.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingOne")
-              div.panel-body
-                .row
-                  .col-md-6
-                    h3 Most Recent Build
-                    Table
-                      tr
-                        td Ship1
-                        td 
-                          |Item1
-                          |Item2
-                          |Item3
-                      tr
-                        td Ship2
-                        td 
-                          |Item1
-                          |Item2
-                          |Item3
-                      tr
-                        td Ship3
-                        td 
-                          |Item1
-                          |Item2
-                          |Item3
-                  .col-md-6
-                    h3 Most Recent Games
-                    Table
-                      tr
-                        th Game #
-                        th Win or Loss
-                        th Point Dif
-                      tr
-                        td Week1
-                        td Win
-                        td +100
-                      tr
-                        td Week2
-                        td Win
-                        td +75
-          div.panel.panel-default
-            div.panel-heading#headingTwo(role="tab")
-              h4.panel-title
-                a.collapsed(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
-                  .row
-                    .col-md-6
-                      h3#second 2) Ricky Taner
-                    .col-md-6
-                      h3#secondPoints 270pts
-            div#collapseTwo.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingTwo")
-              div.panel-body
-                .row
-                  .col-md-6
-                    h3 Most Recent Build
-                    Table
-                      tr
-                        td Ship1
-                        td 
-                          |Item1
-                          |Item2
-                          |Item3
-                      tr
-                        td Ship2
-                        td 
-                          |Item1
-                          |Item2
-                          |Item3
-                      tr
-                        td Ship3
-                        td 
-                          |Item1
-                          |Item2
-                          |Item3
-                  .col-md-6
-                    h3 Most Recent Games
-                    Table
-                      tr
-                        th Game #
-                        th Win or Loss
-                        th Point Dif
-                      tr
-                        td Week1
-                        td Win
-                        td +100
-                      tr
-                        td Week2
-                        td Win
-                        td +75
-          div.panel.panel-default
-            div.panel-heading#headingThree(role="tab")
-              h4.panel-title
-                a.collapsed(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
-                  .row
-                    .col-md-6
-                      h3#second 3) Sucky Mcshitter
-                    .col-md-6
-                      h3#secondPoints 230pts
-            div#collapseThree.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingThree")
-              div.panel-body
-                .row
-                  .col-md-6
-                    h3 Most Recent Build
-                    Table
-                      tr
-                        td Ship1
-                        td 
-                          |Item1
-                          |Item2
-                          |Item3
-                      tr
-                        td Ship2
-                        td 
-                          |Item1
-                          |Item2
-                          |Item3
-                      tr
-                        td Ship3
-                        td 
-                          |Item1
-                          |Item2
-                          |Item3
-                  .col-md-6
-                    h3 Most Recent Games
-                    Table
-                      tr
-                        th Game #
-                        th Win or Loss
-                        th Point Dif
-                      tr
-                        td Week1
-                        td Win
-                        td +100
-                      tr
-                        td Week2
-                        td Win
-                        td +75
+                      h3 Most Recent Games
+                      Table
+                        tr
+                          th Opponent
+                          th Points Won
+                          th Point Differential
+                        each game in gameData[n].history
+                          tr
+                            td= game.against
+                            td= game.pointsGained
+                            td= game.pointDif
+            -n++
+          
           
     .container-fluid#statistics
       .statistics

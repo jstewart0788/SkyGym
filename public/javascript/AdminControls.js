@@ -8,7 +8,7 @@ $( document ).ready( function(){
 
     $('#addShipPlayer1').on('click', function(){
       var shipDropdown = `
-          <select name="Ship`+ shipNum + `">
+          <select name="Ship`+ shipNum + `-Player1">
             `;
 
       res[0].Pilots.forEach(function(elem){
@@ -23,7 +23,7 @@ $( document ).ready( function(){
 
     $('#addShipPlayer2').on('click', function(){
       var shipDropdown = `
-          <select name="Ship`+ shipNum + `">
+          <select name="Ship`+ shipNum + `-Player2">
             `;
 
       res[0].Pilots.forEach(function(elem){
@@ -35,6 +35,11 @@ $( document ).ready( function(){
       shipNum++;
     })
 
+  });
+
+  $("[type=range]").change(function(){
+    var newv=$(this).val();
+    $(this).next().html('<h3> '+newv+ '</h3>');
   });
 
 

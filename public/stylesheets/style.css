@@ -253,6 +253,14 @@ margin-top: 50px;
   margin: 100px;
 }
 
+.gameSubmit{
+  margin: 50px;
+}
+
+.adminPoints{
+  padding:10px;
+}
+
 @font-face {
    font-family: "AstronBoy";
     src: url("../../fonts/Astron Boy/OpenType CFF Std/astron boy video.otf");

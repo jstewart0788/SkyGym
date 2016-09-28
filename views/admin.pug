@@ -35,17 +35,33 @@ block prepend body
                 <!-- Tab panes -->
                 .tab-content
                   .tab-pane.active#game
-                    form(role='form', action="/addGame",method="post", style='max-width: 300px;')
-                      h2 Player 1
-                      #player1Ships
-                      h3 Add a ship
-                      i.fa.fa-plus-square-o.fa-3x#addShipPlayer1
-                      h2 Player 2
-                      #player2Ships
-                      h3 Add a ship
-                      i.fa.fa-plus-square-o.fa-3x#addShipPlayer2
-                      br
-                      button.btn.btn-default(type='submit') Submit
+                    form(role='form', action="/addGame",method="post")
+                      .row
+                        .col-md-7
+                          h2 Player 1
+                          input(type="textbox" name="Player1Name" placeholder="Player1 Name")
+                          #player1Ships
+                          h4 Add a ship
+                          i.fa.fa-plus-square-o.fa-2x#addShipPlayer1
+                        .col-md-5.adminPoints
+                          h3 Points Earned
+                          input(type="range" id="Player1PointsEarned" name="Player1PointsEarned" min="0" max="100" style="max-width:150px;")
+                          span#Player1PointsEarnedDisplay
+                            h3 0
+                      .row
+                        .col-md-7
+                          h2 Player 2
+                          input(type="textbox" name="Player2Name" placeholder="Player2 Name")
+                          #player2Ships
+                          h4 Add a ship
+                          i.fa.fa-plus-square-o.fa-2x#addShipPlayer2
+                        .col-md-5.adminPoints
+                          h3 Points Earned
+                          input(type="range" id="Player2PointsEarned" name="Player2PointsEarned" min="0" max="100" style="max-width:150px;")
+                          span#Player2PointsEarnedDisplay
+                            h3 0
+                      .row.gameSubmit
+                        button.btn.btn-default(type='submit') Submit
                   .tab-pane#user
                     h2 Register Admin
                     p.lead Create a new admin account here.
