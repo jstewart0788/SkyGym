@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "preinstall" : "config/dbinit.js"
+    "preinstall" : "node ./config/dbinit.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
