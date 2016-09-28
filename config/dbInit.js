@@ -3,7 +3,7 @@
 var Ship = require('../models/ship'),
     mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/passport_local_mongoose');
+mongoose.connect('mongodb://heroku_5gd1rb0h:i81jp1a3dgscdge94fohufsjk6@ds041536.mlab.com:41536/heroku_5gd1rb0h');
 /*Update DB with ship list*/
 
 
