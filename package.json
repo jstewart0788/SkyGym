@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "preinstall" : "config/dbinit.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
